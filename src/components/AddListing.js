@@ -27,7 +27,7 @@ const photo = useRef()
 
 
 const createListing = async ()=>{
-    let apiLink = "http://localhost:5000/api/v1/listings/"
+    let apiLink = "https://quickbuck.onrender.com/api/v1/listings/"
     const formData = new FormData()
     formData.append('image',data.image)
     formData.append('title',data.title)

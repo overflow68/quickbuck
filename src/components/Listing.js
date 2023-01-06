@@ -53,7 +53,7 @@ const getSingleListing = async (id,setData)=>{
             description:data.description,
             phoneNumber:data.phoneNumber
         }
-        let apiLink = `http://localhost:5000/api/v1/listings/${id}`
+        let apiLink = `https://quickbuck.onrender.com/api/v1/listings/${id}`
 
         axios.patch(apiLink,newData,{headers:{Authorization:`Bearer ${token}`}})
       .then(function (response) {
@@ -68,7 +68,7 @@ const getSingleListing = async (id,setData)=>{
       const deleteListing = ()=>{
         let confirmation = prompt(`Type in ${data.title} below to delete listing`)
         if (confirmation === data.title){
-        let apiLink = `http://localhost:5000/api/v1/listings/${id}`
+        let apiLink = `https://quickbuck.onrender.com/api/v1/listings/${id}`
         axios.delete(apiLink,{headers:{Authorization:`Bearer ${token}`}})
         .then(function (response) {
             alert("Listing removed successfully")
@@ -87,7 +87,7 @@ const getSingleListing = async (id,setData)=>{
         <ListingCont2>
             <div className="cont-list">
 
-                <img alt="" className="list-img" src={`http://localhost:5000/api/v1/listings/getimg/${data.image}`} ></img>
+                <img alt="" className="list-img" src={`https://quickbuck.onrender.com/api/v1/listings/getimg/${data.image}`} ></img>
 
                 <h1 className="title-list">{data.title}</h1>
 

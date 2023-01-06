@@ -17,7 +17,7 @@ export function Authentication({children}){
     const navigate = useNavigate();
 
         const register = async (username,email,password)=>{
-            const apiLink = "http://localhost:5000/api/v1/auth/register"
+            const apiLink = "https://quickbuck.onrender.com/api/v1/auth/register"
             const registerObj = {
                 "username": username,
                 "email": email,
@@ -37,7 +37,7 @@ export function Authentication({children}){
         }
 
         const login = async(email,password)=>{
-            const apiLink = "http://localhost:5000/api/v1/auth/login"
+            const apiLink = "https://quickbuck.onrender.com/api/v1/auth/login"
             const registerObj = {
                 "email": email,
                 "password":password

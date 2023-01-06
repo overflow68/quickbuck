@@ -3,14 +3,15 @@ import { DateTime, LeftTitle, Result, RightPrice, TitleContainer } from '../styl
 import { Item } from '../style'
 import { ImageTitle } from '../style'
 import {useOperations} from '../contexts/OperationsProvider'
-import {Link, Outlet} from 'react-router-dom'
+import {Link, Outlet,useParams} from 'react-router-dom'
 import uniqid from 'uniqid'
 
 
 function Results() {
-    const {data,fetchHandler,category,listingAge} = useOperations()
+    const {category} = useParams()
+    const {data,fetchHandler,listingAge} = useOperations()
     useEffect(()=>{
-        fetchHandler()
+        fetchHandler(category)
     },[category])
   return (
     <Result>
@@ -18,7 +19,7 @@ function Results() {
         {data.map((item)=>{
             return <Item key={uniqid()}>
                 <ImageTitle>
-                    <img alt="" src={`http://localhost:5000/api/v1/listings/getimg/${item.image}`}>
+                    <img alt="" src={`https://quickbuck.onrender.com/api/v1/listings/getimg/${item.image}`}>
             </img>
             
                 <Link to = {`/${category}/${item._id}`}><TitleContainer>

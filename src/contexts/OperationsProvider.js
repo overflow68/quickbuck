@@ -16,7 +16,7 @@ export function Operations({children}){
   const title = useRef()
 
     const getListings = async (minPrice,maxPrice,category,title,createdBy)=>{
-        let apiLink = "http://localhost:5000/api/v1/listings?"
+        let apiLink = "https://quickbuck.onrender.com/api/v1/listings?"
         if(minPrice){
             apiLink.includes("price")? apiLink += '=>'+ minPrice: apiLink += 'price=>'+ minPrice
             
@@ -39,7 +39,7 @@ export function Operations({children}){
     }
 
     const getSingleListing = async (id,setData)=>{
-        let apiLink = `http://localhost:5000/api/v1/listings/${id}`
+        let apiLink = `https://quickbuck.onrender.com/api/v1/listings/${id}`
         const {data:{listing}} = await axios.get(apiLink).then(listing => setData(listing))
         setData(listing)
     }
@@ -70,9 +70,9 @@ export function Operations({children}){
 
     
 
-    const fetchHandler = ()=>{
+    const fetchHandler = (categoryy)=>{
 
-        getListings(minPrice.current.value,maxPrice.current.value,category,title.current.value)
+        getListings(minPrice.current.value,maxPrice.current.value,categoryy,title.current.value)
       }
 
  

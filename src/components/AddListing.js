@@ -36,7 +36,7 @@ const uploadImage = async (e)=>{
 const picture = e.target.files[0]
   const formData = new FormData()
     formData.append('image',picture)
-    const {data:{pic}} = await axios.post(apiLink,formData,{headers:{Authorization:`Bearer ${token}`}})
+    const {data:{pic}} = await axios.post(apiLink,formData)
 setData(prevState=>({...prevState,image:pic}))
 
   

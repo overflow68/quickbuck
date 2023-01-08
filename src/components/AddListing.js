@@ -32,18 +32,19 @@ useEffect(()=>{
 
 
 const uploadImage = async (e)=>{
-  let apiLink = "http://localhost:5000/api/v1/listings/uploadimg"
+  let apiLink = "https://quickbuck.onrender.com/api/v1/listings/uploadimg"
 const picture = e.target.files[0]
   const formData = new FormData()
     formData.append('image',picture)
     const {data:{pic}} = await axios.post(apiLink,formData,{headers:{Authorization:`Bearer ${token}`}})
 setData(prevState=>({...prevState,image:pic}))
+
   
 }
 
 const createListing = async ()=>{
 
-    let apiLink = "http://localhost:5000/api/v1/listings/"
+    let apiLink = "https://quickbuck.onrender.com/api/v1/listings/"
     const formData = new FormData()
     formData.append('image',data.image)
     formData.append('title',data.title)

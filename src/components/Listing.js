@@ -26,7 +26,7 @@ export function Listing(){
     
     useEffect(()=>{
 const getSingleListing = async (id,setData)=>{
-        let apiLink = `http://localhost:5000/api/v1/listings/${id}`
+        let apiLink = `https://quickbuck.onrender.com/api/v1/listings/${id}`
         const {data:{listing}} = await axios.get(apiLink)
         setData(listing)
     }

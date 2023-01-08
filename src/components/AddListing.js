@@ -1,4 +1,4 @@
-import React,{useState,useRef} from 'react';
+import React,{useState,useRef, useEffect} from 'react';
 import { ListingCont,SubmitButton } from '../style';
 import  DropCategories2  from './DropCategories2';
 import axios from 'axios';
@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 
 
 const AddListing = () => {
+  const[disabled,setDisabled]= useState(true)
     const [data,setData] = useState({
     image:"",
     title:"",
@@ -23,11 +24,26 @@ const description = useRef()
 const phoneNumber = useRef()
 const photo = useRef()
 
+useEffect(()=>{
+  if (data.image !== ""){
+    setDisabled(false)
+  }
+},[data.image])
 
 
+const uploadImage = async (e)=>{
+  let apiLink = "http://localhost:5000/api/v1/listings/uploadimg"
+const picture = e.target.files[0]
+  const formData = new FormData()
+    formData.append('image',picture)
+    const {data:{pic}} = await axios.post(apiLink,formData,{headers:{Authorization:`Bearer ${token}`}})
+setData(prevState=>({...prevState,image:pic}))
+  
+}
 
 const createListing = async ()=>{
-    let apiLink = "https://quickbuck.onrender.com/api/v1/listings/"
+
+    let apiLink = "http://localhost:5000/api/v1/listings/"
     const formData = new FormData()
     formData.append('image',data.image)
     formData.append('title',data.title)
@@ -46,10 +62,8 @@ const createListing = async ()=>{
       });
 }
 
-const getPicture = (e)=>{
-    const pic = e.target.files[0]
-    setData(prevState=>({...prevState,image:pic}))
-}
+
+    
 
 const priceValid = ()=>{
   price.current.value = price.current.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1')
@@ -72,9 +86,9 @@ const priceValid = ()=>{
         <label >Phone Number: </label>
         <input maxLength={9} ref={phoneNumber} onChange={()=>setData(prevState=>({...prevState,"phoneNumber":phoneNumber.current.value}))} ></input>
         <label >Photo: </label>
-        <input ref={photo} type="file" onChange={getPicture} ></input>
+        <input ref={photo} type="file" onChange={uploadImage} ></input>
         
-        <Link to="/"><SubmitButton onClick={createListing} >Create Listing</SubmitButton></Link>
+        <Link to="/"><SubmitButton disabled={disabled} onClick={createListing} >Create Listing</SubmitButton></Link>
       </div>
         </ListingCont>
     );

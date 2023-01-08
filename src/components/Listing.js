@@ -87,7 +87,7 @@ const getSingleListing = async (id,setData)=>{
         <ListingCont2>
             <div className="cont-list">
 
-                <img alt="" className="list-img" src={`https://quickbuck.onrender.com/api/v1/listings/getimg/${data.image}`} ></img>
+                <img alt="" className="list-img" src={data.image} ></img>
 
                 <h1 className="title-list">{data.title}</h1>
 

@@ -19,7 +19,7 @@ function Results() {
         {data.map((item)=>{
             return <Item key={uniqid()}>
                 <ImageTitle>
-                    <img alt="" src={`https://quickbuck.onrender.com/api/v1/listings/getimg/${item.image}`}>
+                    <img alt="" src={item.image}>
             </img>
             
                 <Link to = {`/${category}/${item._id}`}><TitleContainer>

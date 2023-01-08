@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.d3351ae2.css",
-    "main.js": "/static/js/main.05561dcb.js",
-    "index.html": "/index.html",
-    "main.d3351ae2.css.map": "/static/css/main.d3351ae2.css.map",
-    "main.05561dcb.js.map": "/static/js/main.05561dcb.js.map"
+    "main.css": "/overflow68.github.io/quickbuck/static/css/main.d3351ae2.css",
+    "main.js": "/overflow68.github.io/quickbuck/static/js/main.e6f189e0.js",
+    "index.html": "/overflow68.github.io/quickbuck/index.html",
+    "main.d3351ae2.css.map": "/overflow68.github.io/quickbuck/static/css/main.d3351ae2.css.map",
+    "main.e6f189e0.js.map": "/overflow68.github.io/quickbuck/static/js/main.e6f189e0.js.map"
   },
   "entrypoints": [
     "static/css/main.d3351ae2.css",
-    "static/js/main.05561dcb.js"
+    "static/js/main.e6f189e0.js"
   ]
 }

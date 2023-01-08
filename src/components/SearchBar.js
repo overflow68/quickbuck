@@ -3,9 +3,10 @@ import {Searchbar,IconicButton,mainColor} from '../style.js'
 import {BsSearch} from 'react-icons/bs'
 import DropCategories from './DropdownCategories.js'
 import {useOperations} from '../contexts/OperationsProvider'
-import {Link} from 'react-router-dom'
+import {Link, useParams} from 'react-router-dom'
 function SearchBar() {
-  const {fetchHandler,category, title} = useOperations()
+  const {fetchHandler, title} = useOperations()
+  const {category} = useParams()
 
   
   return (
@@ -17,7 +18,7 @@ function SearchBar() {
           <DropCategories />
             <BsSearch color={mainColor} size={45}/>
             <input ref={title} maxLength={80} placeholder='search...'></input>
-            <Link to ={`/${category}`}><IconicButton onClick={fetchHandler}>Search</IconicButton></Link>
+            <Link to ={`/${category}`}><IconicButton onClick={()=>fetchHandler(category)}>Search</IconicButton></Link>
         </div>
 
     </Searchbar>

@@ -6,6 +6,7 @@ import '../style/loader.css'
 function Login() {
   const[toggleLoginRegister,setToggleLoginRegister]= useState(false)
   const[loading,setLoading]=useState(false)
+  const[disabled,setDisabled]=useState(false)
   const style = {"borderBottom":"1px solid black"}
   const {login,register,loginFailed} = useAuth()
   let username = useRef()
@@ -23,6 +24,7 @@ function Login() {
  useEffect(()=>{
   if(loginFailed){
     setLoading(false)
+    setDisabled(false)
   }
  },[loginFailed])
 
@@ -32,12 +34,14 @@ function Login() {
     login(email.current.value,password.current.value)
     resetFields()
     setLoading(true)
+    setDisabled(true)
   }
   const registerHandler = ()=>{
     if(password.current.value === confirmPw.current.value){
       register(username.current.value,email.current.value,password.current.value)
       resetFields()
       setLoading(true)
+      setDisabled(true)
     }else alert("Passwords don't match!")
   }
   
@@ -55,24 +59,24 @@ function Login() {
       <div>
         
         <label >E-mail: </label>
-        <input ref = {email} placeholder='john@gmail.com'></input>
+        <input disabled={disabled} ref = {email} placeholder='john@gmail.com'></input>
         <label >Password: </label>
-        <input ref = {password} type={"password"}placeholder="password"></input>
+        <input disabled={disabled} ref = {password} type={"password"}placeholder="password"></input>
         <label >Confirm password: </label>
-        <input ref = {confirmPw} type={"password"} placeholder="repeat password"></input>
+        <input disabled={disabled} ref = {confirmPw} type={"password"} placeholder="repeat password"></input>
         <label >Username: </label>
-        <input ref={username} placeholder='John'></input>
+        <input disabled={disabled} ref={username} placeholder='John'></input>
         
-        <SubmitButton onClick={registerHandler}>Register</SubmitButton>
+        <SubmitButton disabled={disabled} onClick={registerHandler}>Register</SubmitButton>
         {loginFailed?<p style={{color:"red",marginLeft:"90px"}}>Something went wrong</p>:null}
       </div>
       :
       <div>
         <label >E-mail: </label>
-        <input ref={email} placeholder='john@gmail.com'></input>
+        <input disabled={disabled} ref={email} placeholder='john@gmail.com'></input>
         <label >Password: </label>
-        <input ref = {password} type={"password"} placeholder="password"></input>
-        <SubmitButton onClick={loginHandler}>Login</SubmitButton>
+        <input disabled={disabled} ref = {password} type={"password"} placeholder="password"></input>
+        <SubmitButton disabled={disabled} onClick={loginHandler}>Login</SubmitButton>
         {loginFailed?<p style={{color:"red",marginLeft:"90px"}}>Something went wrong</p>:null}
       </div>}
       {loading?<div class="loader"></div>:null}

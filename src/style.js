@@ -96,7 +96,9 @@ export const IconicButton = styled.button`
 `
 export const SubmitButton = styled.button`
         padding: 15px;
-        margin-left:35%;
+        width:100px;
+        margin-left:37%;
+        margin-bottom:30px;
         border-radius:${borderRadius};
         background-color: ${fifthColor};
 	color: ${mainColor};

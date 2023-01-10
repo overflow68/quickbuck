@@ -1,0 +1,14 @@
+.loader {
+    margin: auto;
+    border: 20px solid #cbb5ff;
+    border-radius: 50%;
+    border-top: 20px solid #6929ff;
+    width: 100px!important;
+    height: 100px!important;
+    animation: spinner 0.7s linear infinite;
+  }
+  
+  @keyframes spinner {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

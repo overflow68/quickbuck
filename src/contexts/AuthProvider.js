@@ -32,6 +32,7 @@ export function Authentication({children}){
             })
             } catch (error) {
                 setLoginFailed(true)
+                setTimeout(setLoginFailed(false), 5000);
             }
             
         }

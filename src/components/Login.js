@@ -1,9 +1,11 @@
-import React, {useState,useRef} from 'react'
+import React, {useState,useRef,useEffect} from 'react'
 import { LoginForm, SubmitButton } from '../style'
 import {useAuth} from '../contexts/AuthProvider'
+import '../style/loader.css'
 
 function Login() {
   const[toggleLoginRegister,setToggleLoginRegister]= useState(false)
+  const[loading,setLoading]=useState(false)
   const style = {"borderBottom":"1px solid black"}
   const {login,register,loginFailed} = useAuth()
   let username = useRef()
@@ -18,20 +20,25 @@ function Login() {
   email.current.value = ""
   }
 
- 
+ useEffect(()=>{
+  if(loginFailed){
+    setLoading(false)
+  }
+ },[loginFailed])
 
 
   
   const loginHandler = ()=>{
     login(email.current.value,password.current.value)
     resetFields()
+    setLoading(true)
   }
   const registerHandler = ()=>{
     if(password.current.value === confirmPw.current.value){
       register(username.current.value,email.current.value,password.current.value)
       resetFields()
+      setLoading(true)
     }else alert("Passwords don't match!")
-      
   }
   
  
@@ -68,6 +75,7 @@ function Login() {
         <SubmitButton onClick={loginHandler}>Login</SubmitButton>
         {loginFailed?<p style={{color:"red",marginLeft:"90px"}}>Something went wrong</p>:null}
       </div>}
+      {loading?<div class="loader"></div>:null}
     </LoginForm>
   )
 }

@@ -6,6 +6,9 @@ import '../style/listing.css'
 import { useOperations } from "../contexts/OperationsProvider";
 import {useAuth} from '../contexts/AuthProvider'
 import { useNavigate} from "react-router-dom";
+import {AiOutlineMail} from 'react-icons/ai'
+import {Navigate} from "react-router-dom"
+import { Link } from "react-router-dom";
 
 
 export function Listing(){
@@ -20,7 +23,7 @@ export function Listing(){
     })
     const [editMode,setEditMode] = useState(false)
     const {id} = useParams()
-    const {listingAge} = useOperations()
+    const {listingAge,setMsgUser} = useOperations()
     const {user,token} = useAuth()
     let navigate = useNavigate();
     
@@ -81,12 +84,21 @@ const getSingleListing = async (id,setData)=>{
         }else alert("Listing was not deleted!")
         
       }
+
+      const msgUser1 = ()=>{
+        const user = {
+          username:data.username,
+          id:data.createdBy
+        }
+        setMsgUser(user)
+        return <Navigate to ="/convos"/>
+      }
    
 
     return(
         <ListingCont2>
             <div className="cont-list">
-
+              
                 <img alt="" className="list-img" src={data.image} ></img>
 
                 <h1 className="title-list">{data.title}</h1>
@@ -111,7 +123,7 @@ const getSingleListing = async (id,setData)=>{
                     </div>
 
                     </div>
-                    {user === data.username && !editMode?<div><IconicButton onClick={()=>setEditMode(true)}>Edit</IconicButton><IconicButton onClick={deleteListing}>Delete</IconicButton></div>:null}
+                    {user === data.username && !editMode?<div><IconicButton onClick={()=>setEditMode(true)}>Edit</IconicButton><IconicButton onClick={deleteListing}>Delete</IconicButton></div>:<Link to="/convos"><AiOutlineMail onClick={msgUser1} className="mail" size={50}/></Link>}
                     {editMode === true?<IconicButton onClick={submitChanges}>Save</IconicButton>:null}
             </div>
         </ListingCont2>

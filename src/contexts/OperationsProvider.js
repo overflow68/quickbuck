@@ -9,6 +9,7 @@ const OperationsContext = React.createContext()
 }
 
 export function Operations({children}){
+  const [msgUser,setMsgUser] = useState()
     const [data,setData] = useState([])
   const [category,setCategory] = useState("Other")
   const minPrice = useRef()
@@ -88,7 +89,9 @@ export function Operations({children}){
         minPrice,
         maxPrice,
         title,
-        listingAge
+        listingAge,
+        msgUser,
+        setMsgUser
     }
     return(
         <OperationsContext.Provider value={value}>

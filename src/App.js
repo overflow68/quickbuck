@@ -15,6 +15,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import { Convos } from './components/Convos'
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
         <Route path =":category" element={<CustomSearch/>}/>
         <Route path =":category/:id" element={<Listing/>}/>
         <Route path = "/add/listing" element = {<ProtectedRoute><AddListing/></ProtectedRoute>}/>
+        <Route path = "convos" element = {<ProtectedRoute><Convos/></ProtectedRoute>}/>
       </Route>
     </Routes>
     </Operations>

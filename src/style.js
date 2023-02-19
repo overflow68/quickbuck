@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const mainColor = "#6929ff"
+export const mainColor = "#783dff"
 export const secondaryColor = "#240f55"
 export const thirdColor = "#ececec"
 export const fourthColor = "#ffffff"
@@ -11,16 +11,17 @@ export const borderRadius = "5px"
 export const Navbar = styled.div`
 display:flex;
 justify-content:space-around;
-background: transparent;
 height:80px;
 align-items:center;
+
 
 h1{
     color: ${mainColor};
 }
 
 div{
-    color:${fourthColor};
+
+    color:${mainColor};
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -53,7 +54,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 height: 100px;
-background: transparent;
+background:${thirdColor};
 
 input{
     all: unset;
@@ -206,7 +207,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 width: 100%;
-background: transparent;
+background:${thirdColor};
 div{
   display: flex;
   justify-content: center;
@@ -401,7 +402,7 @@ input{
 `
 export const ListingCont2 = styled.div`
 margin:0 auto;
-width 500px;
+width 80%;
 height:760px;
 background-color:${fourthColor};
 
@@ -409,6 +410,9 @@ margin: auto;
 margin-top: 70px;
 border-radius: ${borderRadius};
 
+img{
+  border-radius:5px;
+}
 span{
   display: flex;
   justify-content: center;

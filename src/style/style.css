@@ -14,20 +14,15 @@
  
 
 .App{
-    background-color: rgb(255, 255, 255);
+   
     margin: 0 auto;
     max-width: 2000px;
-    background: rgb(254,255,226);
-    background: linear-gradient(87deg, rgba(254,255,226,1) 0%, rgba(176,142,255,1) 74%);
-    background-attachment: fixed;
+   
 }
 
 
 body{
     font-family: Varela Round;
-    background: rgb(254,255,226);
-    background: linear-gradient(87deg, rgba(254,255,226,1) 0%, rgba(176,142,255,1) 74%);
-    background-attachment: fixed;
 }
 a {
     color: inherit;
@@ -57,7 +52,17 @@ body > #root > div {
     height: 100px;
   }
 
-  
+  .footer {
+    padding: 5px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: rgb(112, 51, 255);
+    text-align: center;
+    font-size: 1.2rem;
+    z-index: 1;
+  }
   
   
   

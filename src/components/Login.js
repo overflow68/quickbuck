@@ -31,17 +31,20 @@ function Login() {
 
   
   const loginHandler = ()=>{
-    login(email.current.value,password.current.value)
-    resetFields()
     setLoading(true)
     setDisabled(true)
+    login(email.current.value,password.current.value)
+    resetFields()
+    
+    
   }
   const registerHandler = ()=>{
+    setLoading(true)
+      setDisabled(true)
     if(password.current.value === confirmPw.current.value){
       register(username.current.value,email.current.value,password.current.value)
       resetFields()
-      setLoading(true)
-      setDisabled(true)
+      
     }else alert("Passwords don't match!")
   }
   

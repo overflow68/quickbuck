@@ -1,7 +1,11 @@
 .cont-list{
     word-wrap: break-word;
     text-align: center;
-    color:#2f156b
+    color:#2f156b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
   }
   
 
@@ -11,6 +15,8 @@
     height: 300px;
   margin-top: 30px;
   object-fit: contain;
+  border-radius: 4px;
+  
     
   }
 

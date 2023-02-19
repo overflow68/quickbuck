@@ -98,10 +98,11 @@ const getSingleListing = async (id,setData)=>{
     return(
         <ListingCont2>
             <div className="cont-list">
-              
+              <div>
                 <img alt="" className="list-img" src={data.image} ></img>
-
+               
                 <h1 className="title-list">{data.title}</h1>
+                </div>
 
                 <div className="stats">
                 {!editMode?<h2>{data.price}€</h2>:<input value={data.price} onChange={priceValid} maxLength="6"  placeholder="Type new price here"></input>}
@@ -121,10 +122,10 @@ const getSingleListing = async (id,setData)=>{
                     <h4>Listed by:</h4>
                     <p>{data.username}</p>
                     </div>
-
-                    </div>
-                    {user === data.username && !editMode?<div><IconicButton onClick={()=>setEditMode(true)}>Edit</IconicButton><IconicButton onClick={deleteListing}>Delete</IconicButton></div>:<Link to="/convos"><AiOutlineMail onClick={msgUser1} className="mail" size={50}/></Link>}
+{user === data.username && !editMode?<div><IconicButton onClick={()=>setEditMode(true)}>Edit</IconicButton><IconicButton onClick={deleteListing}>Delete</IconicButton></div>:<Link to="/convos"><AiOutlineMail onClick={msgUser1} className="mail" size={50}/></Link>}
                     {editMode === true?<IconicButton onClick={submitChanges}>Save</IconicButton>:null}
+                    </div>
+                    
             </div>
         </ListingCont2>
     )

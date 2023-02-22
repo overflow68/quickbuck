@@ -3,7 +3,7 @@ import { DateTime, LeftTitle, Result, RightPrice, TitleContainer } from '../styl
 import { Item } from '../style'
 import { ImageTitle } from '../style'
 import {useOperations} from '../contexts/OperationsProvider'
-import {Link, Outlet,useParams} from 'react-router-dom'
+import {Link,useParams} from 'react-router-dom'
 import uniqid from 'uniqid'
 
 
@@ -15,7 +15,7 @@ function Results() {
     },[category])
   return (
     <Result>
-        <Outlet/>
+        
         {data.map((item)=>{
             return <Item key={uniqid()}>
                 <ImageTitle>

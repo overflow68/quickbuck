@@ -16,15 +16,22 @@ text-align: center;
 width: 60%;
 margin: auto;
 }
-
+@media (max-width: 768px) {
+    .cats-cont{
+      grid-template-columns: auto;
+      width: 98%;
+    }
+  }
 .categ {
     position: relative;
     padding: 0;
-    
+    min-width: 250px;
     display: block;
     cursor: pointer;
     overflow: hidden;
   }
+  
+  
   
   .content {
     opacity: 0;

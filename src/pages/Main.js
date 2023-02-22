@@ -23,9 +23,7 @@ const {user,logout} = useAuth()
           <div onClick={logout}>{user?"Logout":null}</div>
         </div>
         </Navbar>
-        <div className="footer">
-        <p>Copyright © 2021 overflow68</p>
-</div>
+   
         <Outlet/>
     </>
     

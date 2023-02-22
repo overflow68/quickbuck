@@ -271,6 +271,7 @@ input{
 
 export const Result = styled.div`
 margin: 0 auto;
+margin-top:10px;
 width: 1000px;
 max-height: 70vh;
 background-color: ${thirdColor};
@@ -404,15 +405,12 @@ export const ListingCont2 = styled.div`
 margin:0 auto;
 width 80%;
 height:760px;
-background-color:${fourthColor};
+background-color:${thirdColor};
 
 margin: auto;
 margin-top: 70px;
 border-radius: ${borderRadius};
 
-img{
-  border-radius:5px;
-}
 span{
   display: flex;
   justify-content: center;

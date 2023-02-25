@@ -433,7 +433,7 @@ div{
 
 input{
   all: unset;
-  background-color: ${thirdColor};
+  background-color: ${fourthColor};
   border-radius: ${borderRadius};
   width: 60%;
   padding:5px;

@@ -14,6 +14,7 @@ export function Authentication({children}){
     const [email,setEmail] = useState()
     const[loginFailed,setLoginFailed] = useState(false)
     const [isAuthenticated ,setIsAuthenticated] = useState(false)
+    const [isFirstLoad,setFirstLoad] = useState(true)
     const navigate = useNavigate();
 
         const register = async (username,email,password)=>{
@@ -76,7 +77,9 @@ const value = {
     user,
     email,
     isAuthenticated,
-    loginFailed
+    loginFailed,
+    isFirstLoad,
+    setFirstLoad
 }
 return(
         <AuthContext.Provider value={value}>

@@ -15,10 +15,7 @@ useEffect(()=>{
   if(isFirstLoad) {
   alert("Please allow some time for the content to load as the server goes 'dormant' when there's no activity. ")
   setFirstLoad(false)
-  console.log("its true")
-  return
 }
-console.log("it's false")
 },[])
   return (
     <>

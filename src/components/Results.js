@@ -4,6 +4,7 @@ import { Item } from '../style'
 import { ImageTitle } from '../style'
 import {useOperations} from '../contexts/OperationsProvider'
 import {Link,useParams} from 'react-router-dom'
+import '../style/loader.css'
 import uniqid from 'uniqid'
 
 
@@ -15,8 +16,7 @@ function Results() {
     },[category])
   return (
     <Result>
-        
-        {data.map((item)=>{
+        {data.length === 0 ?<div className='loader'></div>:data.map((item)=>{
             return <Item key={uniqid()}>
                 <ImageTitle>
                     <img alt="" src={item.image}>

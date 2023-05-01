@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from 'react'
-import { DropdownCategories2 } from '../style'
+import { DropdownCategories2 } from '../style2'
 import {categories} from '../data/categories'
 import uniqid from 'uniqid'
 import {AiOutlineArrowDown} from 'react-icons/ai'

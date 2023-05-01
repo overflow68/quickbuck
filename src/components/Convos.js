@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from "react";
-import { ListingCont2 } from "../style";
+import { ListingCont2 } from "../style2";
 import axios from "axios";
 import { useAuth } from "../contexts/AuthProvider";
 import { Chat } from "./Chat";

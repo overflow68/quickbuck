@@ -1,39 +1,92 @@
 .cont-list{
-    word-wrap: break-word;
-    text-align: center;
-    color:#2f156b;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+  word-wrap: break-word;
+  text-align: center;
+  color: #2f156b;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  padding: 20px;
   }
   
-
-
   .list-img{
-    width: 400px;
-    height: 300px;
+  width: 100%;
+  height: auto;
   margin-top: 30px;
   object-fit: contain;
-    
+  border: 1px solid #ddd;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
   }
-
+  
+  .list-img:hover {
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
   .stats{
-    text-align: left;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  flex-direction: column;
   }
-
-
+  
   .stat{
-    margin-top: 20px;
+  margin-top: 10px;
   }
-
+  
   .title-list{
-    margin-bottom:20px
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-family: Arial, sans-serif;
   }
-
+  
   .mail:hover{
-    color:#7e47ff
-
+  color: #7e47ff;
   }
-
- 
+  
+  .sale-price {
+  color: #c45500;
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 10px;
+  }
+  
+  .label {
+  font-weight: bold;
+  margin-right: 10px;
+  }
+  
+  .value {
+  margin-left: 10px;
+  }
+  
+  @media (max-width: 768px) {
+  .cont-list {
+  display: block;
+  padding: 10px;
+  }
+  
+  .list-img {
+  margin-top: 10px;
+  }
+  
+  .title-list {
+  font-size: 20px;
+  margin-bottom: 10px;
+  }
+  
+  .stat {
+  margin-top: 10px;
+  }
+  
+  .label {
+  display: block;
+  margin-bottom: 5px;
+  }
+  
+  .value {
+  display: block;
+  margin-top: 5px;
+  }
+  }

@@ -1,5 +1,5 @@
 import React,{useState,useRef, useEffect} from 'react';
-import { ListingCont,SubmitButton } from '../style';
+import { ListingCont,SubmitButton } from '../style2';
 import  DropCategories2  from './DropCategories2';
 import axios from 'axios';
 import {useAuth} from '../contexts/AuthProvider'

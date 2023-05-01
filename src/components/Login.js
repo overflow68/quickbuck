@@ -1,5 +1,5 @@
 import React, {useState,useRef,useEffect} from 'react'
-import { LoginForm, SubmitButton } from '../style'
+import { LoginForm, SubmitButton } from '../style2'
 import {useAuth} from '../contexts/AuthProvider'
 import '../style/loader.css'
 

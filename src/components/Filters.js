@@ -1,5 +1,5 @@
 import React from 'react'
-import { Filter } from '../style'
+import { Filter } from '../style2'
 import {useOperations} from '../contexts/OperationsProvider'
 
 function Filters() {

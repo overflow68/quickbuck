@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from 'react'
-import { DropdownCategories } from '../style'
+import { DropdownCategories } from '../style2'
 import {categories} from '../data/categories'
 import {useParams} from 'react-router-dom'
 import {AiOutlineArrowDown} from 'react-icons/ai'

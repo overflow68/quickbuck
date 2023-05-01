@@ -1,6 +1,6 @@
 import React,{useState,useEffect,useRef} from "react";
 import axios from "axios";
-import { IconicButton } from "../style";
+import { IconicButton } from "../style2";
 import { useAuth } from "../contexts/AuthProvider";
 import '../style/chat.css'
 import {AiOutlineSend} from 'react-icons/ai'

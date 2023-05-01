@@ -1,5 +1,5 @@
 import React from 'react'
-import {Searchbar,IconicButton,mainColor} from '../style.js'
+import {Searchbar,IconicButton,mainColor} from '../style2.js'
 import {BsSearch} from 'react-icons/bs'
 import DropCategories from './DropdownCategories.js'
 import {useOperations} from '../contexts/OperationsProvider'

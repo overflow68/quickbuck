@@ -1,5 +1,5 @@
 import {React, useEffect} from 'react'
-import {Navbar,IconicButton} from '../style.js'
+import {Navbar,IconicButton} from '../style2.js'
 import {Link} from 'react-router-dom'
 import { useAuth } from '../contexts/AuthProvider.js';
 import {BsFillChatLeftTextFill} from  'react-icons/bs'

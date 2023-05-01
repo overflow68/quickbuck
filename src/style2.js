@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 
-export const mainColor = "#783dff";
-export const secondaryColor = "#240f55";
-export const thirdColor = "#ececec";
-export const fourthColor = "#ffffff";
-export const fifthColor = "#cbb5ff";
+export const mainColor = "#d6d6d6";
+export const secondaryColor = "#0f2d55";
+export const thirdColor = "#707070";
+export const fourthColor = "#7e7716";
+export const fifthColor = "#b5c0ff";
+export const sixthColor = "#9ba700";
+export const seventhColor = "#15427c";
 export const borderRadius = "5px";
 
 export const Navbar = styled.div`
@@ -12,6 +14,7 @@ export const Navbar = styled.div`
   justify-content: space-around;
   align-items: center;
   height: 80px;
+  background-color:${secondaryColor};
   
   @media screen and (max-width: 768px) {
     flex-direction: column;
@@ -31,9 +34,7 @@ export const Navbar = styled.div`
     margin: 20px;
     transition: 0.25s;
 
-    :hover {
-      color: ${secondaryColor};
-    }
+    
 
     button {
       padding: 15px;
@@ -45,8 +46,8 @@ export const Navbar = styled.div`
       transition: 0.25s;
 
       :hover {
-        background-color: ${secondaryColor};
-        color: ${fourthColor};
+        background-color: ${sixthColor};
+        color: ${mainColor};
       }
     }
   }
@@ -57,13 +58,15 @@ export const Searchbar = styled.div`
   justify-content: center;
   align-items: center;
   height: 100px;
-  background: ${thirdColor};
+  background: ${mainColor};
 
   input {
     all: unset;
-    background: ${fourthColor};
+    background: ${mainColor};
     height: 40px;
     width: 100%;
+    border:1px solid ${thirdColor};
+    border-radius:${borderRadius};
   }
 
   div {
@@ -73,7 +76,7 @@ export const Searchbar = styled.div`
     width: 700px;
     align-items: center;
     justify-content: center;
-    background: ${fourthColor};
+    background: ${mainColor};
   }
 
   @media (max-width: 768px) {
@@ -86,7 +89,7 @@ export const Searchbar = styled.div`
 export const IconicButton = styled.button`
   padding: 15px 20px;
   border-radius: ${borderRadius};
-  background-color: ${fifthColor};
+  background-color: ${secondaryColor};
   color: ${mainColor};
   border: none;
   font: inherit;
@@ -95,8 +98,8 @@ export const IconicButton = styled.button`
   margin:10px;
 
   :hover {
-    background-color: ${secondaryColor};
-    color: ${fourthColor};
+    background-color: ${seventhColor};
+    
   }
 `;
 export const SubmitButton = styled.button`
@@ -105,15 +108,14 @@ export const SubmitButton = styled.button`
         margin-left:37%;
         margin-bottom:30px;
         border-radius:${borderRadius};
-        background-color: ${fifthColor};
+        background-color: ${secondaryColor};
 	color: ${mainColor};
 	border: none;
 	padding: 20;
 	font: inherit;
     transition: 0.25s;
     :hover{
-        background-color: ${secondaryColor};
-        color: ${fourthColor};
+        background-color: ${seventhColor};
     }
 `
 
@@ -184,7 +186,9 @@ button{
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
-  span:hover {background-color: ${fifthColor};}
+  span:hover {background-color: ${seventhColor};
+  color:${mainColor}
+}
   span{
     color: black;
   padding: 12px 16px;
@@ -202,7 +206,7 @@ export const Filter = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  background: ${thirdColor};
+  background: ${mainColor};
 
   div {
     justify-content: center;
@@ -211,7 +215,8 @@ export const Filter = styled.div`
 
   input {
     all: unset;
-    background-color: ${fourthColor};
+    background-color: ${mainColor};
+    border:1px solid ${thirdColor};
     height: 20px;
     width: auto;
     padding: 5px;
@@ -223,7 +228,7 @@ export const Filter = styled.div`
 export const LoginForm = styled.div`
 width: 400px;
 height: 600px;
-background-color: ${fourthColor};
+border:1px solid ${thirdColor};
 margin: auto;
 margin-top: 70px;
 border-radius: ${borderRadius};
@@ -246,7 +251,7 @@ div{
   }
 input{
   all: unset;
-  background-color: ${thirdColor};
+  background-color: ${mainColor};
   border-radius: ${borderRadius};
   width: 95%;
   padding:8px;
@@ -260,7 +265,7 @@ export const Result = styled.div`
   width: 1000px;
   padding: 25px;
   max-height: 70vh;
-  background-color: ${thirdColor};
+  background-color: ${mainColor};
   overflow: scroll;
   overflow-x: hidden;
   margin-bottom: 100px;
@@ -288,7 +293,7 @@ export const Item = styled.div`
   align-items: center;
   width: 98%;
   height: 200px;
-  background-color: ${fourthColor};
+  background-color: ${mainColor};
   margin: 10px;
   border-radius: ${borderRadius};
 
@@ -351,7 +356,8 @@ export const ListingCont = styled.div`
   margin: 0 auto;
   width: 500px;
   height: 730px;
-  background-color: ${fourthColor};
+  border:1px solid ${thirdColor};
+  padding:25px;
   margin: auto;
   margin-top: 70px;
   border-radius: ${borderRadius};
@@ -386,9 +392,9 @@ export const ListingCont = styled.div`
 
   input {
     all: unset;
-    background-color: ${thirdColor};
+    border:1px solid ${thirdColor};
     border-radius: ${borderRadius};
-    width: 100%;
+    width: 96%;
     padding: 8px;
   }
 
@@ -401,7 +407,7 @@ export const ListingCont2 = styled.div`
   margin: 0 auto;
   width: 80%;
   height: 760px;
-  
+  color:${mainColor};
   margin: auto;
   margin-top: 70px;
   border-radius: ${borderRadius};
@@ -451,6 +457,7 @@ export const ListingCont2 = styled.div`
 export const DropdownCategories2 = styled.div`
 position: relative;
 display: inline block;
+
 :hover div {display: block;}
 button{
   display: flex;
@@ -477,7 +484,9 @@ button{
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
-  span:hover {background-color: ${fifthColor};}
+  span:hover {background-color: ${seventhColor};
+  color:${mainColor}
+}
   span{
     color: black;
   padding: 12px 16px;

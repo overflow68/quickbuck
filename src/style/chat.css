@@ -4,7 +4,7 @@
 width: 100%;
 height: 100%;
 position: relative;
-background-color: rgb(229, 206, 255);
+background-color: rgb(15,45,85);
 padding: 0!important;
 border-radius: 5px;
 transition: 0.35s ease-in-out;
@@ -18,18 +18,22 @@ position: absolute;
 display: flex;
 align-items: center;
 justify-content: space-around;
-background-color: rgb(218, 185, 255);
+background-color: rgb(15,45,85);
 }
 
 .send-msg{
     height: 100%!important;
+    width: 80%!important;
     font-size: 1.5rem!important;
+    background-color: rgb(199, 199, 199)!important;
+    border-radius: 5px!important;
+    color:rgb(15,45,85)!important;
 }
 
 .receiver-info{
     display: flex;
     font-size: 2rem;
-    background-color: rgb(186, 125, 255);
+    background-color: rgb(15,45,85);
     border-radius: 5px;
 }
 
@@ -60,7 +64,7 @@ background-color: rgb(218, 185, 255);
 }
 
 .message{
-    background-color:rgb(208, 167, 255) ;
+    background-color:rgb(10, 84, 187);
     border-radius: 10px;
     width:fit-content!important;
     margin-top: 2px;
@@ -70,7 +74,7 @@ background-color: rgb(218, 185, 255);
 }
 
 .message1{
-    background-color:rgb(168, 92, 255) ;
+    background-color:rgb(14, 77, 160) ;
     border-radius: 10px;
     width:fit-content!important;
     margin-top: 2px;

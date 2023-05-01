@@ -1,7 +1,7 @@
 .cont-list{
   word-wrap: break-word;
   text-align: center;
-  color: #2f156b;
+  color: #0f2d55;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
@@ -42,7 +42,7 @@
   }
   
   .mail:hover{
-  color: #7e47ff;
+  color: #15427c;
   }
   
   .sale-price {

@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/quickbuck/static/css/main.cccb68f6.css",
-    "main.js": "/quickbuck/static/js/main.55ae0645.js",
+    "main.css": "/quickbuck/static/css/main.32369e32.css",
+    "main.js": "/quickbuck/static/js/main.3a9d166a.js",
     "static/media/realestate.jpg": "/quickbuck/static/media/realestate.1a427f3b507d507c9a1f.jpg",
     "static/media/phones.png": "/quickbuck/static/media/phones.1b920e121f44b10f2bdc.png",
     "static/media/vehicles.jpeg": "/quickbuck/static/media/vehicles.fd9961c3e23d00565748.jpeg",
@@ -16,11 +16,11 @@
     "static/media/other.jpeg": "/quickbuck/static/media/other.d28de19fe6b1773552a6.jpeg",
     "static/media/kids.jpg": "/quickbuck/static/media/kids.25f22c02ea91bae59c9f.jpg",
     "index.html": "/quickbuck/index.html",
-    "main.cccb68f6.css.map": "/quickbuck/static/css/main.cccb68f6.css.map",
-    "main.55ae0645.js.map": "/quickbuck/static/js/main.55ae0645.js.map"
+    "main.32369e32.css.map": "/quickbuck/static/css/main.32369e32.css.map",
+    "main.3a9d166a.js.map": "/quickbuck/static/js/main.3a9d166a.js.map"
   },
   "entrypoints": [
-    "static/css/main.cccb68f6.css",
-    "static/js/main.55ae0645.js"
+    "static/css/main.32369e32.css",
+    "static/js/main.3a9d166a.js"
   ]
 }

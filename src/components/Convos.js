@@ -26,7 +26,7 @@ export const Convos = () =>{
         setConvos(data)
     }
     useEffect(() => {
-        socketRef.current = io("http://localhost:5000/");
+        socketRef.current = io("https://quickbuck.onrender.com");
     
         return () => {
           socketRef.current.disconnect();

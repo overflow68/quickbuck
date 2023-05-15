@@ -1,8 +1,8 @@
 .loader {
     margin: auto;
-    border: 20px solid #b5c0ff;
+    border: 20px solid #ff9900;
     border-radius: 50%;
-    border-top: 20px solid #0f2d55;
+    border-top: 20px solid #d47800;
     width: 100px!important;
     height: 100px!important;
     animation: spinner 0.7s linear infinite;

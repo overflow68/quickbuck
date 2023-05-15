@@ -3,9 +3,9 @@ import styled from 'styled-components';
 export const mainColor = "#d6d6d6";
 export const secondaryColor = "#0f2d55";
 export const thirdColor = "#707070";
-export const fourthColor = "#7e7716";
+export const fourthColor = "#d47800";
 export const fifthColor = "#b5c0ff";
-export const sixthColor = "#9ba700";
+export const sixthColor = "#ff9900";
 export const seventhColor = "#15427c";
 export const borderRadius = "5px";
 
